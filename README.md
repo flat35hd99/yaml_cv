@@ -16,6 +16,8 @@ YAML形式で書かれたデータファイルと、YAMLもしくはテキスト
 
 また[jerrywdlee](https://github.com/jerrywdlee)さんが、[YAML to 履歴書](https://yaml-2-resume.herokuapp.com/)というウェブサービスを公開されています。そちらだとブラウザだけあれば履歴書PDFが作成できて便利です。
 
+mainブランチにpushすれば、GitHub Actionsで自動ビルドできます。Settings>Actions>Generalでworkflowに`Read and Write permissions`と権限を付与すれば、`gh-pages`ブランチに生成された履歴書を出力します。
+
 ### 必要なライブラリ等
 
 このリポジトリを利用して、ローカルで運用するためには、Rubyの実行環境と以下のライブラリ、フォントが必要になります。
