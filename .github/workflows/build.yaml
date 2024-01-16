@@ -31,6 +31,12 @@ jobs:
         mkdir dist
         ruby make_cv.rb -i data.yaml -s style.txt -o dist/output.pdf
 
+    - name: Upload pdf as an artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: cv-${{ github.sha }}
+        path: dist/output.pdf
+
     - name: Deploy gh page
       uses: peaceiris/actions-gh-pages@v3
       with:
